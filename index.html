@@ -16,12 +16,13 @@ body{background:#0f0f0f;color:white;min-height:100vh}
 .leader-avatar{width:60px;height:60px;background:#f59e0b;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;color:black}
 .leader-info h3{color:#fbbf24;font-size:18px}
 .leader-info p{font-size:13px;color:#94a3b8;margin-top:3px}
-.badge{display:inline-block;background:#f59e0b22;color:#fbbf24;padding:4px 10px;border-radius:20px;font-size:11px;margin-top:6px;font-weight:600}
+.badge{display:inline-block;background:#22c55e22;color:#22c55e;padding:4px 10px;border-radius:20px;font-size:11px;margin-top:6px;font-weight:600}
 h2{font-size:16px;margin-bottom:12px;color:#fbbf24}
 input{width:100%;background:#111;border:1px solid #333;color:white;padding:14px;border-radius:12px;margin-bottom:12px;font-size:15px;outline:none}
 input:focus{border-color:#f59e0b}
 .btn{width:100%;background:#f59e0b;color:black;border:none;padding:15px;border-radius:12px;font-weight:800;font-size:16px;cursor:pointer}
 .btn:active{transform:scale(0.98)}
+.btn2{width:100%;background:#111;border:1px solid #333;color:white;padding:14px;border-radius:12px;font-weight:600;margin-top:10px;cursor:pointer}
 .list-item{background:#252525;padding:12px 14px;border-radius:10px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;font-size:14px}
 .list-item span{color:#aaa;font-size:12px}
 .footer{text-align:center;padding:20px;color:#555;font-size:12px}
@@ -39,7 +40,7 @@ input:focus{border-color:#f59e0b}
 <div class="leader-avatar">L</div>
 <div class="leader-info">
 <h3>Youth Leader</h3>
-<p>Welcome to Nuru Youth Family</p>
+<p>0116782556 • Online</p>
 <div class="badge">● Active Now</div>
 </div>
 </div>
@@ -49,7 +50,8 @@ input:focus{border-color:#f59e0b}
 <input type="text" id="name" placeholder="Your Full Name">
 <input type="tel" id="phone" placeholder="Phone Number 07...">
 <button class="btn" onclick="join()">JOIN NOW</button>
-<p style="font-size:11px;color:#666;text-align:center;margin-top:10px">We will add you to WhatsApp group</p>
+<button class="btn2" onclick="chatLeader()">💬 Chat Leader Directly</button>
+<p style="font-size:11px;color:#666;text-align:center;margin-top:10px">Leader: 0116782556</p>
 </div>
 
 <div class="card">
@@ -61,20 +63,25 @@ input:focus{border-color:#f59e0b}
 
 <div class="card">
 <h2>✨ Verse of the Day</h2>
-<p style="font-size:14px;line-height:1.5;color:#ddd">"Let no one despise you for your youth, but set the believers an example in speech, in conduct, in love, in faith, in purity." <br><span style="color:#f59e0b">- 1 Timothy 4:12</span></p>
+<p style="font-size:14px;line-height:1.5;color:#ddd">"Let no one despise you for your youth, but set the believers an example in speech, in conduct, in love, in faith, in purity."<br><span style="color:#f59e0b">- 1 Timothy 4:12</span></p>
 </div>
 
 </div>
-<div class="footer">Nuru Connect © 2026 • Built for the Youth</div>
+<div class="footer">Nuru Connect © 2026 • Leader: 0116782556</div>
 
 <script>
+const leaderNumber = "254116782556";
+
 function join(){
-let n=document.getElementById('name').value;
-let p=document.getElementById('phone').value;
+let n=document.getElementById('name').value.trim();
+let p=document.getElementById('phone').value.trim();
 if(!n||!p){alert('Please enter name and phone');return;}
-alert('Welcome '+n+'! 🙏\nWe have received your number: '+p+'\nLeader will add you soon!');
-document.getElementById('name').value='';
-document.getElementById('phone').value='';
+let msg = `Shalom Leader! 🙏%0AI'm ${n}%0APhone: ${p}%0A%0APlease add me to Nuru Connect Youth.`;
+window.open(`https://wa.me/${leaderNumber}?text=${msg}`, '_blank');
+}
+
+function chatLeader(){
+window.open(`https://wa.me/${leaderNumber}?text=Shalom Leader! I need help with Nuru Connect`, '_blank');
 }
 </script>
 </body>
