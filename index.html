@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NURU CONNECT</title>
+<style>
+body{margin:0;font-family:Arial;background:#FFFBEB}
+.header{background:#1e3a5f;color:#fff;padding:30px;text-align:center}
+.card{background:#fff;margin:15px;padding:20px;border-radius:12px}
+input{width:100%;padding:12px;margin:6px 0;border:1px solid #ddd;border-radius:8px}
+button{width:100%;padding:14px;background:#F59E0B;color:#fff;border:none;border-radius:8px;font-weight:bold}
+.chat{background:#25D366}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>NURU CONNECT</h1>
+<p>Direct To Pastor | Rongai-Kware-Langata</p>
+</div>
+<div class="card">
+<h3>Join Community</h3>
+<input id="n" placeholder="Your Name">
+<input id="p" placeholder="WhatsApp 07...">
+<input id="a" placeholder="Area">
+<button onclick="join()">JOIN NOW</button>
+<p id="m"></p>
+</div>
+<div class="card">
+<h3>Chat With Pastor</h3>
+<button class="chat" onclick="chat()">CHAT ON WHATSAPP</button>
+</div>
+<script>
+function join(){
+let name=document.getElementById('n').value;
+let ph=document.getElementById('p').value;
+let area=document.getElementById('a').value;
+if(!name||!ph){alert('Enter name & phone');return}
+document.getElementById('m').innerHTML='✅ Welcome '+name;
+window.open('https://wa.me/254116782556?text=NURU New Member: '+name+' Phone: '+ph+' Area: '+area);
+}
+function chat(){
+window.open('https://wa.me/254116782556?text=Hello Pastor from NURU CONNECT I need to talk');
+}
+</script>
+</body>
+</html>
