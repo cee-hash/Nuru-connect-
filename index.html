@@ -3,158 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nuru Connect - Youth Office</title>
+<title>Nuru Connect - Final Office</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
 body{background:#0f0f0f;color:white;min-height:100vh}
-.header{background:linear-gradient(135deg,#f59e0b,#ef4444);padding:22px;text-align:center;position:sticky;top:0;z-index:10}
-.header h1{font-size:26px;font-weight:900}
-.container{max-width:440px;margin:0 auto;padding:16px}
-.card{background:#1c1c1c;border:1px solid #2a2a2a;border-radius:16px;padding:18px;margin-bottom:14px}
-.leader-card{background:linear-gradient(135deg,#1e293b,#0f172a);border:1px solid #f59e0b44;display:flex;gap:14px;align-items:center;cursor:pointer}
-.leader-avatar{width:56px;height:56px;background:#f59e0b;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;color:black}
-h2{font-size:15px;margin-bottom:10px;color:#fbbf24}
+.header{background:linear-gradient(135deg,#f59e0b,#ef4444);padding:20px;text-align:center;position:sticky;top:0;z-index:20}
+.container{max-width:440px;margin:0 auto;padding:14px}
+.card{background:#1c1c1c;border:1px solid #2a2a2a;border-radius:16px;padding:16px;margin-bottom:12px}
+.leader-card{display:flex;gap:12px;align-items:center;background:linear-gradient(135deg,#1e293b,#0f172a);border:1px solid #f59e0b55}
+.avatar{width:52px;height:52px;background:#f59e0b;border-radius:50%;display:flex;align-items:center;justify-content:center;color:black;font-weight:900;font-size:22px}
+.badge{background:#22c55e22;color:#22c55e;padding:3px 8px;border-radius:20px;font-size:10px}
+h2{font-size:14px;color:#fbbf24;margin-bottom:10px}
 input,textarea{width:100%;background:#111;border:1px solid #333;color:white;padding:13px;border-radius:12px;margin-bottom:10px;font-size:14px;outline:none}
-.btn{width:100%;background:#f59e0b;color:black;border:none;padding:14px;border-radius:12px;font-weight:800;font-size:15px;cursor:pointer}
-.btn2{width:100%;background:#111;border:1px solid #333;color:white;padding:12px;border-radius:12px;font-weight:600;margin-top:8px;cursor:pointer;font-size:13px}
-.member{background:#252525;padding:12px;border-radius:10px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
-.member b{font-size:13px}
-.member small{color:#aaa;font-size:11px}
-.actions{display:flex;gap:6px}
-.act{background:#1f1f1f;border:1px solid #333;color:white;padding:6px 10px;border-radius:8px;font-size:11px;cursor:pointer}
-.act.accept{background:#22c55e;color:black;font-weight:700}
-.verse-card{background:linear-gradient(135deg,#1c1c1c,#1a1600);border:1px solid #f59e0b33}
-.verse-text{font-size:14px;line-height:1.5;color:#eee;font-style:italic}
-.verse-ref{color:#f59e0b;margin-top:6px;font-weight:700;font-size:12px}
+textarea{min-height:85px}
+.btn{width:100%;background:#f59e0b;color:black;border:none;padding:14px;border-radius:12px;font-weight:900;font-size:15px;cursor:pointer}
+.btn2{width:100%;background:#252525;border:1px solid #333;color:white;padding:12px;border-radius:12px;font-weight:600;margin-top:8px;cursor:pointer;font-size:13px}
+.loginBtn{background:#f59e0b;color:black;border:none;padding:10px 16px;border-radius:10px;font-weight:900;font-size:12px;cursor:pointer}
+.member{background:#252525;padding:11px;border-radius:10px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.actions{display:flex;gap:5px;flex-wrap:wrap}
+.act{background:#111;border:1px solid #333;color:white;padding:6px 9px;border-radius:8px;font-size:11px;cursor:pointer}
+.act.ok{background:#22c55e;color:black;font-weight:800}
+.act.del{background:#ef4444;color:white}
+.tabs{display:flex;gap:6px;margin-bottom:10px}
+.tab{flex:1;background:#111;border:1px solid #333;padding:10px;border-radius:10px;text-align:center;font-size:11px;cursor:pointer}
+.tab.on{background:#f59e0b;color:black;font-weight:900}
+.verse{background:linear-gradient(135deg,#1c1c1c,#1a1600);border:1px solid #f59e0b33}
+.vtxt{font-size:14px;font-style:italic;color:#eee;line-height:1.5}
+.vref{color:#f59e0b;font-weight:800;margin-top:6px;font-size:12px}
 .hidden{display:none}
-.tabs{display:flex;gap:8px;margin-bottom:12px}
-.tab{flex:1;background:#111;border:1px solid #333;padding:10px;border-radius:10px;text-align:center;font-size:12px;cursor:pointer}
-.tab.active{background:#f59e0b;color:black;font-weight:800}
-.badge{display:inline-block;background:#22c55e22;color:#22c55e;padding:3px 8px;border-radius:20px;font-size:10px;margin-top:5px}
-.footer{text-align:center;padding:18px;color:#555;font-size:11px}
+.footer{text-align:center;padding:16px;color:#555;font-size:11px}
 </style>
 </head>
 <body>
 <div class="header">
 <h1>NURU CONNECT</h1>
-<p style="font-size:12px;opacity:0.9">Rongai Youth • Leader Office 0116782556</p>
+<p style="font-size:11px;opacity:0.9">Rongai Youth • Leader 0116782556 • Permanent Storage ON</p>
 </div>
 
 <div class="container">
 
-<!-- YOUTH VIEW -->
+<!-- YOUTH -->
 <div id="youthView">
-<div class="card leader-card" onclick="openOffice()">
-<div class="leader-avatar">L</div>
-<div><h3 style="color:#fbbf24;font-size:16px">Youth Leader</h3><p style="font-size:12px;color:#94a3b8">0116782556 • Tap 3x for Office</p><span class="badge">● Online + Daily Auto</span></div>
+<div class="card leader-card">
+<div class="avatar">L</div>
+<div style="flex:1"><b style="color:#fbbf24">Youth Leader</b><br><small style="color:#aaa">0116782556 • Daily Auto</small><br><span class="badge">● Deployed</span></div>
+<button class="loginBtn" onclick="openOffice()">LEADER LOGIN</button>
 </div>
 
-<div class="card verse-card">
-<h2>📖 Verse Today - <span id="verseDate"></span></h2>
-<p class="verse-text" id="verseText"></p>
-<p class="verse-ref" id="verseRef"></p>
-<button class="btn2" onclick="shareVerse()">📲 Share Verse</button>
+<div class="card verse">
+<h2>📖 Verse Today - <span id="vDate"></span></h2>
+<p class="vtxt" id="vText"></p>
+<p class="vref" id="vRef"></p>
+<button class="btn2" onclick="shareVerse()">📲 Share Verse to All</button>
 </div>
 
 <div class="card">
-<h2>📢 Leader Guidance</h2>
-<div id="notesList"><p style="color:#666;font-size:12px">No guidance yet.</p></div>
+<h2>📢 Guidance From Leader</h2>
+<div id="gList"><p style="color:#666;font-size:12px">No guidance yet.</p></div>
 </div>
 
 <div class="card">
 <h2>Join Nuru Youth</h2>
-<input type="text" id="name" placeholder="Your Full Name">
-<input type="tel" id="phone" placeholder="07... or 01...">
-<button class="btn" onclick="joinRequest()">REQUEST TO JOIN</button>
-<p style="font-size:10px;color:#666;text-align:center;margin-top:8px">Leader will accept you, then you can chat 1-on-1</p>
+<input type="text" id="yName" placeholder="Your Full Name">
+<input type="tel" id="yPhone" placeholder="07... / 01...">
+<button class="btn" onclick="requestJoin()">REQUEST TO JOIN</button>
 </div>
 </div>
 
-<!-- LEADER OFFICE VIEW -->
+<!-- OFFICE -->
 <div id="officeView" class="hidden">
 <div class="card" style="border-color:#f59e0b">
-<h2>🔐 LEADER OPERATING OFFICE</h2>
-<p style="font-size:11px;color:#888">PIN 2556 • 0116782556 Only</p>
+<h2>🔐 LEADER OPERATING OFFICE - PERMANENT</h2>
+<div id="pinBox">
+<input type="password" id="pin" placeholder="Enter PIN 2556">
+<button class="btn" onclick="unlock()">UNLOCK OFFICE</button>
+</div>
+
+<div id="officeContent" class="hidden">
 <div class="tabs">
-<div class="tab active" id="tabPend" onclick="showTab('pending')">Pending (<span id="countPend">0</span>)</div>
-<div class="tab" id="tabMemb" onclick="showTab('members')">Members (<span id="countMemb">0</span>)</div>
-<div class="tab" id="tabBroad" onclick="showTab('broadcast')">Broadcast</div>
+<div class="tab on" id="tP" onclick="tab('P')">Pending (<span id="cP">0</span>)</div>
+<div class="tab" id="tM" onclick="tab('M')">Members (<span id="cM">0</span>)</div>
+<div class="tab" id="tB" onclick="tab('B')">Broadcast</div>
 </div>
 
-<!-- PENDING -->
-<div id="pendingTab">
-<input type="password" id="pin1" placeholder="Enter PIN 2556 to unlock">
-<div id="pendingList"></div>
+<div id="tabP"><div id="pList"></div></div>
+
+<div id="tabM" class="hidden">
+<input type="text" id="search" placeholder="Search member..." oninput="drawMembers()">
+<div id="mList"></div>
+<button class="btn2" onclick="exportData()">💾 Backup Members (Export)</button>
 </div>
 
-<!-- MEMBERS -->
-<div id="membersTab" class="hidden">
-<input type="text" id="searchMemb" placeholder="Search member..." oninput="renderMembers()">
-<div id="membersList"></div>
+<div id="tabB" class="hidden">
+<textarea id="bText" placeholder="Type guidance to ALL members..."></textarea>
+<button class="btn" onclick="postGuid()">POST ON SITE FOR ALL</button>
+<button class="btn2" onclick="broadWA()">📲 Broadcast Guidance to All via WhatsApp</button>
+<button class="btn2" onclick="broadVerse()">📖 Broadcast Today's Verse to All</button>
 </div>
 
-<!-- BROADCAST -->
-<div id="broadcastTab" class="hidden">
-<textarea id="broadcastText" placeholder="Type daily guidance to ALL members..."></textarea>
-<button class="btn" onclick="postGuidance()">📢 POST GUIDANCE TO ALL (Site)</button>
-<button class="btn2" onclick="broadcastAllWA()">📲 BROADCAST TO ALL ON WHATSAPP</button>
-<button class="btn2" onclick="broadcastVerseAll()">📖 BROADCAST TODAY'S VERSE TO ALL</button>
-<p style="font-size:10px;color:#666;margin-top:8px">Broadcast sends to all accepted members via WhatsApp group link or individual list</p>
 </div>
-
-<button class="btn2" onclick="closeOffice()">← Back to Youth View</button>
+<button class="btn2" onclick="closeOffice()">← Back to Youth</button>
 </div>
 </div>
 
 </div>
-<div class="footer">Nuru Connect © 2026 • Office: 0116782556</div>
+<div class="footer">Nuru Connect © 2026 • Permanent Storage • 0116782556</div>
 
 <script>
-const leaderNumber = "254116782556";
-const verses = [
-{v:"Let no one despise you for your youth, but set the believers an example in speech, conduct, love, faith, purity.",r:"1 Timothy 4:12"},
-{v:"For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope.",r:"Jeremiah 29:11"},
+const LEADER = "254116782556";
+const verses=[
+{v:"Let no one despise you for your youth, but set the believers an example.",r:"1 Timothy 4:12"},
+{v:"For I know the plans I have for you, declares the Lord, plans for welfare and not for evil.",r:"Jeremiah 29:11"},
 {v:"Trust in the Lord with all your heart, and do not lean on your own understanding.",r:"Proverbs 3:5"},
 {v:"I can do all things through him who strengthens me.",r:"Philippians 4:13"},
-{v:"Be strong and courageous. Do not be frightened, for the Lord your God will be with you wherever you go.",r:"Joshua 1:9"},
+{v:"Be strong and courageous. Do not be frightened, for the Lord your God will be with you.",r:"Joshua 1:9"},
 {v:"The Lord is my light and my salvation; whom shall I fear?",r:"Psalm 27:1"},
-{v:"Commit your work to the Lord, and your plans will be established.",r:"Proverbs 16:3"},
-{v:"And we know that for those who love God all things work together for good.",r:"Romans 8:28"},
-{v:"But those who wait for the Lord shall renew their strength; they shall mount up with wings like eagles.",r:"Isaiah 40:31"},
 {v:"Your word is a lamp to my feet and a light to my path.",r:"Psalm 119:105"},
-{v:"Do not be anxious about anything, but in everything by prayer let your requests be made known to God.",r:"Philippians 4:6"},
-{v:"Create in me a clean heart, O God, and renew a right spirit within me.",r:"Psalm 51:10"},
-{v:"Delight yourself in the Lord, and he will give you the desires of your heart.",r:"Psalm 37:4"},
 {v:"For God gave us a spirit not of fear but of power and love and self-control.",r:"2 Timothy 1:7"},
-{v:"Be still, and know that I am God.",r:"Psalm 46:10"},
-{v:"How can a young man keep his way pure? By guarding it according to your word.",r:"Psalm 119:9"},
-{v:"Seek first the kingdom of God and his righteousness, and all these things will be added to you.",r:"Matthew 6:33"},
-{v:"Arise, shine, for your light has come, and the glory of the Lord has risen upon you.",r:"Isaiah 60:1"}
+{v:"Arise, shine, for your light has come, and the glory of the Lord has risen upon you.",r:"Isaiah 60:1 - NURU THEME"}
 ];
-let dayIndex = new Date().getDate() % verses.length;
-let today = verses[dayIndex];
-document.getElementById('verseText').innerText = `"${today.v}"`;
-document.getElementById('verseRef').innerText = `- ${today.r}`;
-document.getElementById('verseDate').innerText = new Date().toLocaleDateString('en-KE',{weekday:'short',day:'numeric',month:'short'});
+let di=new Date().getDate()%verses.length; let td=verses[di];
+document.getElementById('vText').innerText='"'+td.v+'"'; document.getElementById('vRef').innerText='- '+td.r;
+document.getElementById('vDate').innerText=new Date().toLocaleDateString('en-KE',{weekday:'short',day:'numeric',month:'short'});
 
-let pending = JSON.parse(localStorage.getItem('nuru_pending')||'[]');
-let members = JSON.parse(localStorage.getItem('nuru_members')||'[]');
-let guidances = JSON.parse(localStorage.getItem('nuru_guidance')||'[]');
+let pending=JSON.parse(localStorage.getItem('nuru_pending_v2')||'[]');
+let members=JSON.parse(localStorage.getItem('nuru_members_v2')||'[]');
+let guides=JSON.parse(localStorage.getItem('nuru_guides_v2')||'[]');
 
-function save(){localStorage.setItem('nuru_pending',JSON.stringify(pending));localStorage.setItem('nuru_members',JSON.stringify(members));localStorage.setItem('nuru_guidance',JSON.stringify(guidances)); updateCounts(); renderAll();}
+function saveAll(){localStorage.setItem('nuru_pending_v2',JSON.stringify(pending));localStorage.setItem('nuru_members_v2',JSON.stringify(members));localStorage.setItem('nuru_guides_v2',JSON.stringify(guides)); updateCounts(); drawAll();}
 
-function joinRequest(){
-let n=document.getElementById('name').value.trim();
-let p=document.getElementById('phone').value.trim();
+function requestJoin(){
+let n=document.getElementById('yName').value.trim();
+let p=document.getElementById('yPhone').value.trim();
 if(!n||!p){alert('Enter name and phone');return;}
-let entry={id:Date.now(),name:n,phone:p,date:new Date().toLocaleString('en-KE')};
-pending.push(entry); save();
-alert(`Request sent ${n}! Leader 0116782556 will accept you soon. You will see ACCEPTED in members list.`);
-document.getElementById('name').value='';document.getElementById('phone').value='';
-// Also open WhatsApp to leader for quick chat
-let msg=`Shalom Leader! I'm ${n} Phone: ${p} I just requested to join Nuru Connect, please accept me.`;
-window.location.href=`https://wa.me/${leaderNumber}?text=`+encodeURIComponent(msg);
+let o={id:Date.now(),name:n,phone:p,date:new Date().toLocaleString('en-KE')};
+pending.push(o); saveAll();
+alert('Request saved permanently! Leader will accept you. Opening WhatsApp to Leader...');
+let msg=`Shalom Leader! I'm ${n} Phone ${p} I requested to join Nuru Connect`;
+let url="https://wa.me/"+LEADER+"?text="+encodeURIComponent(msg);
+window.location.href=url;
+}
+function updateCounts(){document.getElementById('cP').innerText=pending.length;document.getElementById('cM').innerText=members.length;}
+function drawAll(){drawPending();drawMembers();drawGuides();}
+function drawPending(){
+let d=document.getElementById('pList');
+if(pending.length==0){d.innerHTML='<p style="color:#666;font-size:12px">No pending</p>';return;}
+d.innerHTML='';pending.forEach(m=>{
+d.innerHTML+=`<div class="member"><div><b>${m.name}</b><br><small>${m.phone}<br>${m.date}</small></div><div class="actions"><button class="act ok" onclick="accept(${m.id})">ACCEPT</button><button class="act" onclick="chatOne('${m.phone}','${m.name}')">Chat</button><button class="act del" onclick="decl(${m.id})">X</button></div></div>`;
+});
+}
+function drawMembers(){
+let d=document.getElementById('mList'); let q=(document.getElementById('search')?.value||'').toLowerCase();
+let list=members.filter(m=>m.name.toLowerCase().includes(q)||m.phone.includes(q));
+if(list.length==0){d.innerHTML='<p style="color:#666;font-size:12px">No members yet. Accept from Pending.</p>';return;}
+d.innerHTML='';list.forEach(m=>{
+d.innerHTML+=`<div class="member"><div><b>${m.name}</b><br><small>${m.phone}</small></div><div class="actions"><button class="act ok" onclick="chatOne('${m.phone}','${m.name}')">💬 Chat 1-on-1</button></div></div>`;
+});
+}
+function drawGuides(){
+let d=document.getElementById('gList');
+if(guides.length==0){d.innerHTML='<p style="color:#666;font-size:12px">No guidance yet.</p>';return;}
+d.innerHTML='';guides.slice().reverse().slice(0,10).forEach(g=>{
+d.innerHTML+=`<div style="background:#252525;border-left:3px solid #f59e0b;padding:10px;border-radius:8px;margin-bottom:8px"><small style="color:#fbbf24">${g.date}</small><p style="font-size:13px;margin-top:4px">${g.text}</p></div>`;
+});
+}
+function accept(id){
+let i=pending.findIndex(x=>x.id==id); if(i<0)return;
+let m=pending[i]; members.push(m); pending.splice(i,1); saveAll();
+alert('Accepted '+m.name+' - Now in Members tab');
+}
+function decl(id){pending=pending.filter(x=>x.id!=id); saveAll();}
+function chatOne(phone,name){
+let c=phone.replace(/\D/g,''); if(c.startsWith('0'))c='254'+c.slice(1);
+let url="https://wa.me/"+c+"?text="+encodeURIComponent(`Shalom ${name}! 🙏 This is Leader Nuru Connect (0116782556). Karibu! You are accepted.`);
+window.location.href=url;
+}
+function postGuid(){
+let t=document.getElementById('bText').value.trim(); if(!t){alert('Type guidance');return;}
+guides.push({text:t,date:new Date().toLocaleString('en-KE')}); document.getElementById('bText').value=''; saveAll(); alert('Posted! All youth will see on site permanently');
+}
+function broadWA(){
+let t=document.getElementById('bText').value.trim()|| (guides.length?guides[guides.length-1].text:'');
+if(!t){alert('Type guidance');return;}
+let url="https://wa.me/?text="+encodeURIComponent(`📢 NURU GUIDANCE - Leader 0116782556\n\n${t}\n\nnuru-connect.onrender.com`);
+window.location.href=url;
+}
+function broadVerse(){
+let url="https://wa.me/?text="+encodeURIComponent(`📖 Nuru Daily Verse - ${document.getElementById('vDate').innerText}\n\n"${td.v}"\n${td.r}\n\nFrom Leader 0116782556`);
+window.location.href=url;
+}
+function shareVerse(){broadVerse();}
+function exportData(){
+let data=JSON.stringify({members,pending,guides},null,2);
+let blob=new Blob([data],{type:'application/json'});
+let url=URL.createObjectURL(blob);
+let a=document.createElement('a'); a.href=url; a.download='nuru-backup.json'; a.click();
+alert('Backup downloaded! Keep it safe.');
 }
 
-function updateCounts(){document.getElementById('countPend').innerText=pending.length;document.getElementById('countMemb').innerText=members.length;}
-function renderAll(){renderPending();renderMembers();renderGuidance();}
+function openOffice(){document.getElementById('youthView').classList.add('hidden');document.getElementById('officeView').classList.remove('hidden');}
+function closeOffice(){document.getElementById('officeView').classList.add('hidden');document.getElementById('youthView').classList.remove('hidden');}
+function unlock(){
+if(document.getElementById('pin').value!=='2556'){alert('Wrong PIN! Use 2556');return;}
+document.getElementById('pinBox').classList.add('hidden');
+document.getElementById('officeContent').classList.remove('hidden');
+drawAll(); updateCounts();
+}
+function tab(which){
+document.getElementById('tabP').classList.add('hidden');document.getElementById('tabM').classList.add('hidden');document.getElementById('tabB').classList.add('hidden');
+document.getElementById('tP').classList.remove('on');document.getElementById('tM').classList.remove('on');document.getElementById('tB').classList.remove('on');
+if(which=='P'){document.getElementById('tabP').classList.remove('hidden');document.getElementById('tP').classList.add('on');}
+if(which=='M'){document.getElementById('tabM').classList.remove('hidden');document.getElementById('tM').classList.add('on');drawMembers();}
+if(which=='B'){document.getElementById('tabB').classList.remove('hidden');document.getElementById('tB').classList.add('on');}
+}
+updateCounts();drawAll();
+</script>
+</body>
+</html>
